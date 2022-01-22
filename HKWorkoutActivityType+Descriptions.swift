@@ -13,7 +13,7 @@ extension HKWorkoutActivityType {
     /*
      Simple mapping of available workout types to a human readable name.
      */
-    var name: String {
+    var activityName: String {
         switch self {
         case .americanFootball:             return "American Football"
         case .archery:                      return "Archery"
@@ -115,7 +115,7 @@ extension HKWorkoutActivityType {
     var commonName: String {
         switch self {
         case .highIntensityIntervalTraining: return "HIIT"
-        default: return name
+        default: return activityName
         }
     }
     
