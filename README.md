@@ -8,7 +8,7 @@ HKWorkoutActivityType contains many useful values for determining differently wo
 ```
 let type: HKWorkoutActivityType = .americanFootball
 
-type.activityName      // "American Football"
+type.activityName     // "American Football"
 type.commonName       // "American Football"
 type.associatedEmoji  // "🏈"
 ```
