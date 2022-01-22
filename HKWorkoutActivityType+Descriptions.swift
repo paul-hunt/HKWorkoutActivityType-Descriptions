@@ -6,7 +6,6 @@
 //  Copyright © 2020 George Green of London. All rights reserved.
 //
 
-import Foundation
 import HealthKit
 
 extension HKWorkoutActivityType {
@@ -98,8 +97,15 @@ extension HKWorkoutActivityType {
         case .discSports:                   return "Disc Sports"
         case .fitnessGaming:                return "Fitness Gaming"
         
+        // iOS 14
+        case .cooldown:                     return "Cool Down"
+        case .cardioDance:                  return "Cardio Dance"
+        case .socialDance:                  return "Social Dance"
+        case .pickleball:                   return "Pickleball"
+
         // Catch-all
         default:                            return "Other"
+        @unknown default:                   return "Other"
         }
     }
     
@@ -187,7 +193,7 @@ extension HKWorkoutActivityType {
             case .female:                   return "🧗‍♀️"
             case .male:                     return "🧗🏻‍♂️"
             }
-        case .dance, .danceInspiredTraining:
+        case .dance, .danceInspiredTraining, .cardioDance, .socialDance:
             switch gender {
             case .female:                   return "💃"
             case .male:                     return "🕺🏿"
@@ -197,7 +203,7 @@ extension HKWorkoutActivityType {
             case .female:                   return "🤸‍♀️"
             case .male:                     return "🤸‍♂️"
             }
-        case .handball:
+        case .handball, .pickleball:
             switch gender {
             case .female:                   return "🤾‍♀️"
             case .male:                     return "🤾‍♂️"
@@ -207,7 +213,7 @@ extension HKWorkoutActivityType {
             case .female:                   return "🧘‍♀️"
             case .male:                     return "🧘‍♂️"
             }
-        case .preparationAndRecovery:
+        case .preparationAndRecovery, .cooldown:
             switch gender {
             case .female:                   return "🙆‍♀️"
             case .male:                     return "🙆‍♂️"
