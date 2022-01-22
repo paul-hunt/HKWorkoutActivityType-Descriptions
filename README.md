@@ -8,17 +8,17 @@ HKWorkoutActivityType contains many useful values for determining differently wo
 ```
 let type: HKWorkoutActivityType = .americanFootball
 
-type.name             // "American Football"
+type.activityName      // "American Football"
 type.commonName       // "American Football"
 type.associatedEmoji  // "🏈"
 ```
 
-For most activity types the `name` and `commonName` are the same, however there are a few examples (actually 1 at the time of writing), that can make use of these two names:
+For most activity types the `activityName` and `commonName` are the same, however there are a few examples (actually 1 at the time of writing), that can make use of these two names:
 
 ```
 let type: HKWorkoutActivityType = .highIntensityIntervalTraining
 
-type.name             // "High Intensity Interval Training"
+type.activityName     // "High Intensity Interval Training"
 type.commonName       // "HIIT"
 ```
 
